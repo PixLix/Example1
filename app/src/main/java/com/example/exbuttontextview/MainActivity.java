@@ -18,10 +18,15 @@ public class MainActivity extends AppCompatActivity {
     }
     // This method is called when the button is clicked
     public void onBtnClick (View vew){
-        // Access to the textView and EditText
+        // Access to the textView, EditText and EditText
         TextView txtHello = findViewById(R.id.txtMessage);
+        EditText editText = findViewById(R.id.edtTextName);
+
+        //Get the user input, convert it to String and store it to variable txtName
+        String txtName = editText.getText().toString();
+
         //Set the text to the textView
-        txtHello.setText("Hello There!!");
+        txtHello.setText("Hello There " + txtName);
 
     }
 }
